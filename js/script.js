@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             imagenPostal.src = postal.src;
             imagenPostal.alt = postal.alt;
+            imagenPostal.hidden = false;
             textoPostal.textContent = postal.texto;
             vistaPrevia.hidden = false;
         });
@@ -58,8 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
         form.reset();
         form.classList.remove('form-validado');
         vistaPrevia.hidden = true;
-        imagenPostal.src = '';
-        imagenPostal.alt = '';
+        imagenPostal.hidden = true;
+        imagenPostal.src = 'img/lago_di_como.jpg';
+        imagenPostal.alt = 'Imagen previa de la postal';
         textoPostal.textContent = '';
     });
 });
