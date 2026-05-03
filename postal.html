@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envía tu postal | Lago de Como</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Envía una postal del Lago de Como</h1>
+    <p>Comparte Como con quien quieras</p>
+</header>
+
+<nav aria-label="Menú principal">
+        <ul>
+            <li><a href="index.html#historia">Historia y cultura</a></li>
+            <li><a href="index.html#lugares">Lugares destacados</a></li>
+            <li><a href="index.html#multimedia">Galería multimedia</a></li>
+            <li><a href="postal.html" aria-current="page">Envía tu postal</a></li>
+            <li><a href="rutas.html">Consejos y Gastronomía</a></li>
+        </ul>
+    </nav>
+
+<main id="contenido-principal">
+
+<section>
+    <h2>Formulario de envío de postal</h2>
+
+    <p>Selecciona una imagen y escribe tu mensaje para simular el envío de una postal.</p>
+
+    <form action="#" method="post" id="postal-form">
+
+        <fieldset>
+            <legend>Selecciona la imagen de la postal</legend>
+
+            <div>
+                <input type="radio" id="duomo" name="postal" value="duomo" required>
+                <label for="duomo">Catedral de Como</label>
+            </div>
+
+            <div>
+                <input type="radio" id="lago" name="postal" value="lago">
+                <label for="lago">Lago de Como</label>
+            </div>
+
+            <div>
+                <input type="radio" id="villa" name="postal" value="villa">
+                <label for="villa">Villa Olmo</label>
+            </div>
+
+        </fieldset>
+
+        <div>
+            <label for="nombre">Nombre (obligatorio):</label>
+            <input type="text" id="nombre" name="nombre" aria-required="true" required autocomplete="name">
+        </div>
+
+        <div>
+            <label for="email">Email (obligatorio):</label>
+            <input type="email" id="email" name="email" aria-required="true" required autocomplete="email">
+        </div>
+
+        <div>
+            <label for="mensaje">Mensaje (obligatorio):</label>
+            <textarea id="mensaje" name="mensaje" rows="5" aria-required="true" required></textarea>
+        </div>
+
+        <div>
+            <label for="fecha">Fecha (obligatorio):</label>
+            <input type="date" id="fecha" aria-describedby="ayuda" name="fecha" aria-required="true" required>
+            <p id="ayuda">Por ejemplo: 03/10/2023</p>
+        </div>
+
+        <button type="submit" id="enviar-postal">Enviar postal</button>
+
+        <div id="resultado-postal" class="form-message" role="status" aria-live="polite"></div>
+
+    </form>
+
+</section>
+
+<p>
+    <a class="button-link" href="index.html">Volver a la página principal</a>
+</p>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Multimedia - Universidad Rey Juan Carlos.</p>
+</footer>
+
+</body>
+</html>
