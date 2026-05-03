@@ -2,10 +2,47 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('postal-form');
     const resultado = document.getElementById('resultado-postal');
+    const vistaPrevia = document.getElementById('vista-previa-postal');
+    const imagenPostal = document.getElementById('imagen-postal');
+    const textoPostal = document.getElementById('texto-postal');
 
-    if (!form || !resultado) {
+    if (!form || !resultado || !vistaPrevia || !imagenPostal || !textoPostal) {
         return;
     }
+
+    const postales = {
+        duomo: {
+            src: 'img/templo_voltiano.jpg',
+            alt: 'Monumento histórico de Como seleccionado como postal',
+            texto: 'Postal seleccionada: Catedral de Como'
+        },
+        lago: {
+            src: 'img/lago_di_como.jpg',
+            alt: 'Vista del Lago de Como rodeado de montañas',
+            texto: 'Postal seleccionada: Lago de Como'
+        },
+        estadio:{
+            src: 'img/estadio_como.jpeg',
+            alt: 'Estadio Giuseppe Sinigaglia, hogar del equipo de fútbol local',
+            texto: 'Postal seleccionada: Estadio Giuseppe Sinigaglia'
+        },
+        villa: {
+            src: 'img/villa_olmo.jpg',
+            alt: 'Villa Olmo con jardines frente al Lago de Como',
+            texto: 'Postal seleccionada: Villa Olmo'
+        }
+    };
+
+    form.querySelectorAll('input[name="postal"]').forEach(function(opcion) {
+        opcion.addEventListener('change', function() {
+            const postal = postales[opcion.value];
+
+            imagenPostal.src = postal.src;
+            imagenPostal.alt = postal.alt;
+            textoPostal.textContent = postal.texto;
+            vistaPrevia.hidden = false;
+        });
+    });
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -16,7 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         resultado.className = 'form-message success';
-        resultado.textContent = 'Postal enviada correctamente.';
+        resultado.textContent = document.getElementById('nombre').value + ' ha enviado una postal a ' + document.getElementById('email').value + ', a fecha ' + document.getElementById('fecha').value + ' con la ' + textoPostal.textContent + ' y el siguiente mensaje: ' + document.getElementById('mensaje').value + '.';
         form.reset();
+        vistaPrevia.hidden = true;
+        imagenPostal.src = '';
+        imagenPostal.alt = '';
+        textoPostal.textContent = '';
     });
 });

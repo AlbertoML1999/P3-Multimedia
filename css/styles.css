@@ -307,6 +307,16 @@ button:disabled {
     border: 1px solid #ef4444;
 }
 
+.postal-preview {
+    margin-top: 18px;
+}
+
+.postal-preview img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+}
+
 .cards-list {
     list-style: none;
     display: grid;

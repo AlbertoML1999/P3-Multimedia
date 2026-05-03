@@ -52,11 +52,21 @@
             </div>
 
             <div>
+                <input type="radio" id="estadio" name="postal" value="estadio">
+                <label for="estadio">Estadio Giuseppe Sinigaglia</label>
+            </div>
+
+            <div>
                 <input type="radio" id="villa" name="postal" value="villa">
                 <label for="villa">Villa Olmo</label>
             </div>
 
         </fieldset>
+
+        <figure id="vista-previa-postal" class="postal-preview" hidden>
+            <img id="imagen-postal" src="" alt="">
+            <figcaption id="texto-postal"></figcaption>
+        </figure>
 
         <div>
             <label for="nombre">Nombre (obligatorio):</label>
