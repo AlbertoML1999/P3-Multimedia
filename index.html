@@ -10,6 +10,8 @@
 
 <body>
 
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
     <header>
         <h1>Explora Como, Italia</h1>
         <p>Un destino que combina historia, naturaleza y cultura.</p>
@@ -18,6 +20,7 @@
     <nav aria-label="Menú principal">
         <ul>
             <li><a href="#historia">Historia y cultura</a></li>
+            <li><a href="#jugadores">Jugadores destacados</a></li>
             <li><a href="#lugares">Lugares destacados</a></li>
             <li><a href="#multimedia">Galería multimedia</a></li>
             <li><a href="postal.html">Envía tu postal</a></li>
@@ -55,25 +58,29 @@
             </figure>
         </section>
 
-        <section id="lugares">
-            <h2>Lugares destacados</h2>
+        <section id="jugadores">
+            <h2>Jugadores destacados del Como 1907</h2>
 
-            <table summary="Tabla de jugadores con más partidos en el Como 1907"
-                aria-describedby="tabla-jugadores-como">
+            <p id="tabla-jugadores-como">
+                Tabla informativa con jugadores históricos del Como 1907, su país, fecha de nacimiento,
+                partidos disputados y goles marcados.
+            </p>
+
+            <table aria-describedby="tabla-jugadores-como">
                 <caption>Jugadores con más partidos en el Como 1907</caption>
                 <thead>
                     <tr>
-                        <th>Jugador</th>
-                        <th>Club Actual</th>
-                        <th>País</th>
-                        <th>Fecha de Nacimiento</th>
-                        <th>Partidos</th>
-                        <th>Goles</th>
+                        <th scope="col">Jugador</th>
+                        <th scope="col">Club Actual</th>
+                        <th scope="col">País</th>
+                        <th scope="col">Fecha de Nacimiento</th>
+                        <th scope="col">Partidos</th>
+                        <th scope="col">Goles</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Giancarlo Centi</td>
+                        <th scope="row">Giancarlo Centi</th>
                         <td>Retirado</td>
                         <td>Italia</td>
                         <td>14.05.1959</td>
@@ -81,7 +88,7 @@
                         <td>3</td>
                     </tr>
                     <tr>
-                        <td>Bruno Ballarini</td>
+                        <th scope="row">Bruno Ballarini</th>
                         <td>—</td>
                         <td>Italia</td>
                         <td>18.04.1937</td>
@@ -89,7 +96,7 @@
                         <td>22</td>
                     </tr>
                     <tr>
-                        <td>Claudio Correnti</td>
+                        <th scope="row">Claudio Correnti</th>
                         <td>Retirado</td>
                         <td>Italia</td>
                         <td>12.03.1941</td>
@@ -97,7 +104,7 @@
                         <td>6</td>
                     </tr>
                     <tr>
-                        <td>Luigi Paleari</td>
+                        <th scope="row">Luigi Paleari</th>
                         <td>—</td>
                         <td>Italia</td>
                         <td>08.11.1941</td>
@@ -105,7 +112,7 @@
                         <td>2</td>
                     </tr>
                     <tr>
-                        <td>Silvano Fontolan</td>
+                        <th scope="row">Silvano Fontolan</th>
                         <td>Retirado</td>
                         <td>Italia</td>
                         <td>24.02.1955</td>
@@ -114,6 +121,10 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <section id="lugares">
+            <h2>Lugares destacados</h2>
 
             <article>
                 <h3>Estadio Giuseppe Sinigaglia</h3>

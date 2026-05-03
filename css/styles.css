@@ -143,8 +143,7 @@ article {
     gap: 24px;
 }
 
-#lugares h2,
-#lugares table {
+#lugares h2 {
     grid-column: 1 / -1;
 }
 
@@ -323,6 +322,13 @@ button:disabled {
     border-radius: 8px;
     margin-bottom: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.cards-list li article {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .timeline {
