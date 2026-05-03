@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         duomo: {
             src: 'img/templo_voltiano.jpg',
             alt: 'Monumento histórico de Como seleccionado como postal',
-            texto: 'Postal seleccionada: Catedral de Como'
+            texto: 'Postal seleccionada: Templo Voltiano'
         },
         lago: {
             src: 'img/lago_di_como.jpg',
@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
+        form.classList.add('form-validado');
 
         if (!form.checkValidity()) {
             form.reportValidity();
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resultado.className = 'form-message success';
         resultado.textContent = document.getElementById('nombre').value + ' ha enviado una postal a ' + document.getElementById('email').value + ', a fecha ' + document.getElementById('fecha').value + ' con la ' + textoPostal.textContent + ' y el siguiente mensaje: ' + document.getElementById('mensaje').value + '.';
         form.reset();
+        form.classList.remove('form-validado');
         vistaPrevia.hidden = true;
         imagenPostal.src = '';
         imagenPostal.alt = '';

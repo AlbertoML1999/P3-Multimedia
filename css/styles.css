@@ -159,11 +159,22 @@ a:focus {
 
 table {
     width: 100%;
+    min-width: 680px;
     border-collapse: collapse;
     background-color: #fff;
     margin: 20px 0 30px;
     border-radius: 8px;
     overflow: hidden;
+}
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-container:focus {
+    outline: 3px solid #111;
+    outline-offset: 3px;
 }
 
 caption {
@@ -226,18 +237,18 @@ button {
     border: 1px solid #9ca3af;
 }
 
-input:required:invalid,
-textarea:required:invalid {
+form.form-validado input:required:invalid,
+form.form-validado textarea:required:invalid {
     border-color: #dc2626;
 }
 
-input:required:invalid:focus,
-textarea:required:invalid:focus {
+form.form-validado input:required:invalid:focus,
+form.form-validado textarea:required:invalid:focus {
     outline: 3px solid #fecaca;
 }
 
-input:required:valid,
-textarea:required:valid {
+form.form-validado input:required:valid,
+form.form-validado textarea:required:valid {
     border-color: #16a34a;
 }
 
