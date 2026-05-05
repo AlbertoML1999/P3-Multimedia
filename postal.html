@@ -11,14 +11,14 @@
 
 <body>
 
-<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 
-<header>
-    <h1>Envía una postal del Lago de Como</h1>
-    <p>Comparte Como con quien quieras</p>
-</header>
+    <header>
+        <h1>Envía una postal del Lago de Como</h1>
+        <p>Comparte Como con quien quieras</p>
+    </header>
 
-<nav aria-label="Menú principal">
+    <nav aria-label="Menú principal">
         <ul>
             <li><a href="index.html#historia">Historia y cultura</a></li>
             <li><a href="index.html#jugadores">Jugadores destacados</a></li>
@@ -29,83 +29,89 @@
         </ul>
     </nav>
 
-<main id="contenido-principal">
+    <main id="contenido-principal">
 
-<section>
-    <h2>Formulario de envío de postal</h2>
+        <section>
+            <h2>Formulario de envío de postal</h2>
 
-    <p>Selecciona una imagen y escribe tu mensaje para simular el envío de una postal.</p>
+            <p>Selecciona una imagen y escribe tu mensaje para simular el envío de una postal.</p>
 
-    <form action="#" method="post" id="postal-form">
+            <p id="instrucciones-formulario">
+                Todos los campos son obligatorios. Si algún dato es incorrecto, el navegador mostrará un mensaje de
+                error antes de enviar la postal.
+            </p>
 
-        <fieldset>
-            <legend>Selecciona la imagen de la postal</legend>
+            <form action="#" method="post" id="postal-form" aria-describedby="instrucciones-formulario">
 
-            <div>
-                <input type="radio" id="duomo" name="postal" value="duomo" required>
-                <label for="duomo">Templo Voltiano</label>
-            </div>
+                <fieldset>
+                    <legend>Selecciona la imagen de la postal</legend>
 
-            <div>
-                <input type="radio" id="lago" name="postal" value="lago">
-                <label for="lago">Lago de Como</label>
-            </div>
+                    <div>
+                        <input type="radio" id="templo" name="postal" value="templo" required>
+                        <label for="templo">Templo Voltiano</label>
+                    </div>
 
-            <div>
-                <input type="radio" id="estadio" name="postal" value="estadio">
-                <label for="estadio">Estadio Giuseppe Sinigaglia</label>
-            </div>
+                    <div>
+                        <input type="radio" id="lago" name="postal" value="lago">
+                        <label for="lago">Lago de Como</label>
+                    </div>
 
-            <div>
-                <input type="radio" id="villa" name="postal" value="villa">
-                <label for="villa">Villa Olmo</label>
-            </div>
+                    <div>
+                        <input type="radio" id="estadio" name="postal" value="estadio">
+                        <label for="estadio">Estadio Giuseppe Sinigaglia</label>
+                    </div>
 
-        </fieldset>
+                    <div>
+                        <input type="radio" id="villa" name="postal" value="villa">
+                        <label for="villa">Villa Olmo</label>
+                    </div>
 
-        <figure id="vista-previa-postal" class="postal-preview" hidden>
-            <img id="imagen-postal" src="img/lago_di_como.jpg" alt="Imagen previa de la postal" hidden>
-            <figcaption id="texto-postal"></figcaption>
-        </figure>
+                </fieldset>
 
-        <div>
-            <label for="nombre">Nombre (obligatorio):</label>
-            <input type="text" id="nombre" name="nombre" required autocomplete="name">
-        </div>
+                <figure id="vista-previa-postal" class="postal-preview" hidden>
+                    <img id="imagen-postal" src="img/lago_di_como.jpg" alt="Imagen previa de la postal" hidden>
+                    <figcaption id="texto-postal"></figcaption>
+                </figure>
 
-        <div>
-            <label for="email">Email (obligatorio):</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-        </div>
+                <div>
+                    <label for="nombre">Nombre (obligatorio):</label>
+                    <input type="text" id="nombre" name="nombre" required autocomplete="name">
+                </div>
 
-        <div>
-            <label for="mensaje">Mensaje (obligatorio):</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-        </div>
+                <div>
+                    <label for="email">Email (obligatorio):</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
 
-        <div>
-            <label for="fecha">Fecha (obligatorio):</label>
-            <input type="date" id="fecha" aria-describedby="ayuda" name="fecha" required>
-            <p id="ayuda">Por ejemplo: 03/10/2023</p>
-        </div>
+                <div>
+                    <label for="mensaje">Mensaje (obligatorio):</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
 
-        <button type="submit" id="enviar-postal">Enviar postal</button>
+                <div>
+                    <label for="fecha">Fecha (obligatorio):</label>
+                    <input type="date" id="fecha" aria-describedby="ayuda" name="fecha" required>
+                    <p id="ayuda">Introduce la fecha (por ejemplo: 03/10/2023)</p>
+                </div>
 
-        <div id="resultado-postal" class="form-message" role="status" aria-live="polite"></div>
+                <button type="submit" id="enviar-postal">Enviar postal</button>
 
-    </form>
+                <div id="resultado-postal" class="form-message" role="status" aria-live="polite"></div>
 
-</section>
+            </form>
 
-<p>
-    <a class="button-link" href="index.html">Volver a la página principal</a>
-</p>
+        </section>
 
-</main>
+        <p>
+            <a class="button-link" href="index.html">Volver a la página principal</a>
+        </p>
 
-<footer>
-    <p>&copy; 2026 Multimedia - Universidad Rey Juan Carlos.</p>
-</footer>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Multimedia - Universidad Rey Juan Carlos.</p>
+    </footer>
 
 </body>
+
 </html>

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const postales = {
-        duomo: {
+        templo: {
             src: 'img/templo_voltiano.jpg',
             alt: 'Monumento histórico de Como seleccionado como postal',
             texto: 'Postal seleccionada: Templo Voltiano'
